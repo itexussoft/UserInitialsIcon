@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		18304D505B4626AC44C9F6AE /* Pods_UserInitialsIcon_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C732E5FA1DADD821948D7B2 /* Pods_UserInitialsIcon_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		339349A7FB814BE44DA0D5BA /* Pods_UserInitialsIcon_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD0E2DC51BFBB0FD75AD499 /* Pods_UserInitialsIcon_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4D87D9251B2F35BF0049A3A3 /* CKGCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D87D9221B2F35BF0049A3A3 /* CKGCell.m */; };
+		4D87D9261B2F35BF0049A3A3 /* CKGCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D87D9241B2F35BF0049A3A3 /* CKGCell.xib */; };
+		4D87D9291B2F37280049A3A3 /* CKGPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D87D9281B2F37280049A3A3 /* CKGPerson.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -41,8 +44,13 @@
 		203822B3C76DC44C0EDCD630 /* Pods-UserInitialsIcon_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserInitialsIcon_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UserInitialsIcon_Tests/Pods-UserInitialsIcon_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		22E459CAAEFCC322D2D0E262 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2C732E5FA1DADD821948D7B2 /* Pods_UserInitialsIcon_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserInitialsIcon_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D87D9221B2F35BF0049A3A3 /* CKGCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKGCell.m; sourceTree = "<group>"; };
+		4D87D9231B2F35BF0049A3A3 /* CKGCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKGCell.h; sourceTree = "<group>"; };
+		4D87D9241B2F35BF0049A3A3 /* CKGCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CKGCell.xib; sourceTree = "<group>"; };
+		4D87D9271B2F37280049A3A3 /* CKGPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKGPerson.h; sourceTree = "<group>"; };
+		4D87D9281B2F37280049A3A3 /* CKGPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKGPerson.m; sourceTree = "<group>"; };
 		53EC5FBF919DFF636FE4FF83 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* UserInitialsIcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = UserInitialsIcon.app; path = UserInitialsIcon_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* UserInitialsIcon_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserInitialsIcon_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -55,7 +63,7 @@
 		6003F5A5195388D20070C39A /* CKGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CKGViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* CKGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CKGViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = UserInitialsIcon_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* UserInitialsIcon_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserInitialsIcon_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -108,8 +116,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* UserInitialsIcon.app */,
-				6003F5AE195388D20070C39A /* Tests.xctest */,
+				6003F58A195388D20070C39A /* UserInitialsIcon_Example.app */,
+				6003F5AE195388D20070C39A /* UserInitialsIcon_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,11 +138,16 @@
 		6003F593195388D20070C39A /* Example for UserInitialsIcon */ = {
 			isa = PBXGroup;
 			children = (
+				4D87D9221B2F35BF0049A3A3 /* CKGCell.m */,
+				4D87D9231B2F35BF0049A3A3 /* CKGCell.h */,
+				4D87D9241B2F35BF0049A3A3 /* CKGCell.xib */,
 				6003F59C195388D20070C39A /* CKGAppDelegate.h */,
 				6003F59D195388D20070C39A /* CKGAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* CKGViewController.h */,
 				6003F5A6195388D20070C39A /* CKGViewController.m */,
+				4D87D9271B2F37280049A3A3 /* CKGPerson.h */,
+				4D87D9281B2F37280049A3A3 /* CKGPerson.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -213,7 +226,7 @@
 			);
 			name = UserInitialsIcon_Example;
 			productName = UserInitialsIcon;
-			productReference = 6003F58A195388D20070C39A /* UserInitialsIcon.app */;
+			productReference = 6003F58A195388D20070C39A /* UserInitialsIcon_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* UserInitialsIcon_Tests */ = {
@@ -234,7 +247,7 @@
 			);
 			name = UserInitialsIcon_Tests;
 			productName = UserInitialsIconTests;
-			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* UserInitialsIcon_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -277,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				4D87D9261B2F35BF0049A3A3 /* CKGCell.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -391,8 +405,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* CKGAppDelegate.m in Sources */,
+				4D87D9251B2F35BF0049A3A3 /* CKGCell.m in Sources */,
 				6003F5A7195388D20070C39A /* CKGViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				4D87D9291B2F37280049A3A3 /* CKGPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +531,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UserInitialsIcon/UserInitialsIcon-Prefix.pch";
 				INFOPLIST_FILE = "UserInitialsIcon/UserInitialsIcon-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -530,6 +547,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UserInitialsIcon/UserInitialsIcon-Prefix.pch";
 				INFOPLIST_FILE = "UserInitialsIcon/UserInitialsIcon-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

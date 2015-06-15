@@ -3,6 +3,7 @@ use_frameworks!
 
 target 'UserInitialsIcon_Example', :exclusive => true do
   pod "UserInitialsIcon", :path => "../"
+
 end
 
 target 'UserInitialsIcon_Tests', :exclusive => true do
@@ -10,4 +11,5 @@ target 'UserInitialsIcon_Tests', :exclusive => true do
 
   pod 'Specta'
   pod 'Expecta'
+
 end
