@@ -3,7 +3,7 @@ PODS:
   - FontAwesomeKit/Core (2.2.0)
   - HexColors (2.2.1)
   - Specta (1.0.2)
-  - UserInitialsIcon (0.1.0):
+  - UserInitialsIcon (1.0):
     - FontAwesomeKit/Core
     - HexColors
 
@@ -21,6 +21,6 @@ SPEC CHECKSUMS:
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
   HexColors: abfd172e329dab59888614ccba6f216cec59289d
   Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
-  UserInitialsIcon: 6cf5402b8063d85769deb0c71ba373cf27d0809a
+  UserInitialsIcon: a901097f6549d3f1a43e234864807e6ed29397fa
 
 COCOAPODS: 0.37.2
