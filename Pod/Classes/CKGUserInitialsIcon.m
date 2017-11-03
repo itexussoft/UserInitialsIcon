@@ -8,7 +8,7 @@
 
 #import "CKGUserInitialsIcon.h"
 
-#import <HexColors/HexColor.h>
+#import <HexColors/HexColors.h>
 
 static NSCache *imageCache = nil;
 static NSArray *colors = nil;
@@ -24,25 +24,43 @@ static NSArray *colors = nil;
         return nil;
     }
     name = name.length > 0 ? name : identifier;
-    NSArray *words = [name componentsSeparatedByString:@" "];
+    NSMutableArray *words = [[name componentsSeparatedByString:@" "] mutableCopy];
     NSString *initials = [(NSString *)words[0] substringToIndex:1];
     initials = initials.capitalizedString;
     if ([words count] > 1) {
-        NSString *second_initial = [(NSString *)words[1] substringToIndex:1];
-        initials = [initials stringByAppendingString:second_initial];
+        
+        [self removeBlankStringsFromArray:words];
+        
+        if (words.count > 0 && ((NSString*)words[1]).length > 0) {
+            NSString *second_initial = [(NSString *)words[1] substringToIndex:1];
+            initials = [initials stringByAppendingString:second_initial];
+        }
+        
     }
     NSString *key = [NSString stringWithFormat:@"%@:%.1f:(%.1f,%.1f):%ld", initials, fontSize, imageSize.width, imageSize.height, (long)identifier.hash];
     
     UIImage *image = [self.imageCache objectForKey:key];
     if (!image) {
         CKGUserInitialsIcon *icon = [self iconWithCode:initials size:fontSize];
-        icon.drawingBackgroundColor = [HXColor colorWithHexString:self.colors[identifier.hash%self.colors.count]];
+        icon.drawingBackgroundColor = [HXColor hx_colorWithHexString:self.colors[identifier.hash%self.colors.count]];
         [icon addAttribute:NSForegroundColorAttributeName value: [UIColor whiteColor]];
         image = [icon imageWithSize:imageSize];
         [self.imageCache setObject:image forKey:key];
     }
     
     return image;
+}
+
++ (void) removeBlankStringsFromArray:(NSMutableArray*)array
+{
+    if (array.count > 3) {
+        if ([array[1] isEqualToString:@""] || [array[1] isEqualToString:@" "]) {
+            [array removeObjectAtIndex:1];
+        }
+        if (((NSString*)array[1]).length < 1) {
+            [self removeBlankStringsFromArray:array];
+        }
+    }
 }
 
 + (NSCache *)imageCache {
@@ -81,3 +99,4 @@ static NSArray *colors = nil;
 }
 
 @end
+
